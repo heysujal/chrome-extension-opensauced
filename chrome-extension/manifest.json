@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "OpenSauced Chrome Extension",
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "OpenSauced"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "src/main.jsx"
+            ],
+            "matches": [
+                "https://*.github.com/*"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "src/background.jsx"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ]
+}
