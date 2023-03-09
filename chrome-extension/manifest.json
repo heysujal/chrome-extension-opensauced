@@ -13,15 +13,24 @@
             ],
             "matches": [
                 "https://*.github.com/*"
-            ]
+            ],
+            "run_at":"document_start"
         }
     ],
     "background": {
         "service_worker": "src/background.jsx"
     },
     "permissions": [
+        "cookies",
         "storage",
         "activeTab",
-        "scripting"
-    ]
+        "scripting",
+        "tabs"
+ 
+    ],
+    "icons": {
+        "16": "icon.png"
+        
+      },
+      "host_permissions": ["<all_urls>"]
 }

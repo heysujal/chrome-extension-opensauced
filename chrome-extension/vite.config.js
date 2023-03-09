@@ -8,4 +8,7 @@ import manifest from './manifest.json' assert { type: 'json' }
 export default defineConfig({
    
   plugins: [react(), crx({ manifest })],
+  server: {
+    port: 8000
+  }
 });
