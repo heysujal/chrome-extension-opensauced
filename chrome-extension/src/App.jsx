@@ -38,7 +38,7 @@ async function handleLoad(){
       let openSaucedProfileButton = document.createElement('button');
       openSaucedProfileButton.innerHTML = 'View on OpenSauced';
       openSaucedProfileButton.className = 'openSaucedProfileButton';
-      openSaucedProfileButton.style = 'width: 100%; background-color: orange; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 10px; cursor: pointer; font-size: 16px; font-weight: 500;';
+      openSaucedProfileButton.style = 'width: 100%; background: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 10px; cursor: pointer; font-size: 16px; font-weight: 500;';
       openSaucedProfileButton.onclick = function(){
         window.open('https://insights.opensauced.pizza/' + username);
       }
