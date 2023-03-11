@@ -61,13 +61,6 @@ function App() {
       <div className="App-header">
        <h3>Welcome to OpenSauced Craftwork Browser Extension</h3>
         <p>OpenSauced is a community of open source contributors </p>
-{  isOpenSaucedMember && <p>Hurray, you are a OpenSauced Member</p>}
-{  !isOpenSaucedMember &&  <p>You are not a OpenSauced Member. Why not become one ?</p>
-  
-  }
-{  !isOpenSaucedMember && 
-
-  <a href="https://insights.opensauced.pizza/"><button className="signup-btn">Sign Up</button></a>   }
       </div>
     </div>
   )
