@@ -6,7 +6,7 @@ let isOpenSaucedMember = false;
 async function handleLoad(){
 
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  // console.log(tab)
+   
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     function:  insertButton,
@@ -21,7 +21,7 @@ async function handleLoad(){
   let url = window.location.href;
  
   let username = url.split('/').pop();
-  // console.log(username)
+  
 
   let doesButtonExists = document.body.querySelector(".openSaucedProfileButton");
   if(doesButtonExists){
@@ -31,7 +31,7 @@ async function handleLoad(){
   fetch('https://api.opensauced.pizza/v1/users/' + username)
   .then(res => res.json())
   .then((data) => {
-    // console.log(data);
+     
     // if user exists in opensauced database then add a button on github profile page
     if(data.is_open_sauced_member){
       isOpenSaucedMember = true
